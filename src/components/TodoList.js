@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import TodoInputContainer from '../container/TodoInputContainer'
-import Todos from './Todos'
+import TodosContainer from '../container/TodosContainer'
 import { connect } from "react-redux";
 
 export default class TodoList extends Component {
@@ -9,7 +9,7 @@ export default class TodoList extends Component {
     return (
       <div>
         <TodoInputContainer/>
-        <Todos todos={this.props.todos}/>
+        <TodosContainer todos={this.props.todos}/>
       </div>
     )
   }
