@@ -1,17 +1,20 @@
 import React, { Component } from 'react'
+import { connect } from "react-redux";
 
 export default class TodoInput extends Component {
-  dispatch = () => {
+  onClickAddNewTodo = () => {
     const {input} = this.refs
-    this.props.onNewTodoAdded(input.value)
+    this.props.addNewTodo(input.value)
     input.value = ''
   }
+
   render() {
     return (
       <div>
         <input ref="input"/>
-        <button onClick={this.dispatch}>add</button>
+        <button onClick={this.onClickAddNewTodo}>add</button>
       </div>
     )
   }
 }
+
