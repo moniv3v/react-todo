@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { connect } from "react-redux";
+import TodoFilterContainer from '../container/TodoFilterContainer.js'
 
 export default class TodoInput extends Component {
   onClickAddNewTodo = () => {
@@ -13,6 +13,7 @@ export default class TodoInput extends Component {
       <div>
         <input ref="input"/>
         <button onClick={this.onClickAddNewTodo}>add</button>
+        <TodoFilterContainer />
       </div>
     )
   }

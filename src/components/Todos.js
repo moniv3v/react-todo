@@ -7,7 +7,7 @@ export default class Todos extends Component {
     const {todos} = this.props
     return (
       <div>
-        {todos.map((todo, i) => <Todo checkedItem={this.props.checkedItem} id={todo.id} content={todo.content} status={todo.status}/>)}
+        {todos.map((todo, i) => <Todo key={todo.id} checkedItem={this.props.checkedItem} id={todo.id} content={todo.content} status={todo.status}/>)}
       </div>
     )
   }

@@ -20,7 +20,12 @@ export default (state = initialState, { type, payload }) => {
             });
 
             console.log(payload);
-            return {todos: newTodos};
+            return {todos: newTodos
+            };
+        
+        case "REPLACE_LIST":
+            console.log(payload);
+            return {todos:payload};
 
         default:
             return state
